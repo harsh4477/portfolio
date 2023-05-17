@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/resume/resume.css" rel="stylesheet" />
+  </head>
+  <body style="height: 2200px">
+    <header class="header-main">
+      <nav class="navbar navbar-expand-sm cm-navbar-main">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img
+              class="img-fluid"
+              width="180px"
+              src="images/my-logo-white.png"
+              alt=" logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="cm-navbar-btn-wrapper">
+            <button class="cm-navbar-btn">
+              Download CV
+
+              <span class="annimation-line"></span>
+              <span class="annimation-line"></span>
+              <span class="annimation-line"></span>
+              <span class="annimation-line"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="banner-main">
+      <div class="banner-img">
+        <video autoplay muted loop>
+          <source src="images/resume/sea.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="banner-detail-main">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-8">
+              <h2 class="banner-head">
+                You don't have to be
+                <span class="banner-head-sub">'A Creative'</span> to be
+                Creative.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main class="main-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="profile-card"></div>
+          </div>
+          <div class="col-md-8">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, ab.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- <script src="js/styles.js"></script> -->
+
+    <script>
+      var card = $(".profile-card");
+      profileCardFixed = "profile-card-fixed";
+      profileCard = $(".banner-main").height();
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > profileCard) {
+          card.addClass(profileCardFixed);
+        } else {
+          card.removeClass(profileCardFixed);
+        }
+      });
+    </script>
+  </body>
+</html>

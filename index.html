@@ -5,14 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <div>
-      <h6>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-        ducimus eos officiis. Dicta consequatur dolores commodi quibusdam
-        accusantium, optio esse?
-      </h6>
-    </div>
+    <header class="header-main">
+      <nav class="navbar navbar-expand-sm cm-navbar-main">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img
+              class="img-fluid"
+              width="180px"
+              src="images/my-logo.png"
+              alt=" logo"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-center cm-navbar-link-wrap"
+            id="collapsibleNavbar"
+          >
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link cm-navbar-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link cm-navbar-link" href="#">Education</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link cm-navbar-link" href="#">Expericnce</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link cm-navbar-link" href="#">Contact Me</a>
+              </li>
+            </ul>
+          </div>
+          <div class="cm-navbar-btn-wrapper">
+            <button class="cm-navbar-btn">
+              Download CV
+
+              <span class="annimation-line"></span>
+              <span class="annimation-line"></span>
+              <span class="annimation-line"></span>
+              <span class="annimation-line"></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section style="height: 500px; background: gainsboro"></section>
+
+    <script src="./bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="js/styles.js"></script>
   </body>
 </html>
