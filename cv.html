@@ -7,6 +7,13 @@
     <title>Resume</title>
 
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link href="./css/resume/resume.css" rel="stylesheet" />
   </head>
   <body style="height: 2200px">
@@ -54,7 +61,7 @@
             <div class="col-md-8">
               <h2 class="banner-head">
                 You don't have to be
-                <span class="banner-head-sub">'A Creative'</span> to be
+                <br /><span class="banner-head-sub">'A Creative'</span> to be
                 Creative.
               </h2>
             </div>
@@ -66,11 +73,79 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <div class="profile-card"></div>
+            <div class="profile-card">
+              <div class="profile-icon-wrap">
+                <img
+                  class="profile-icon"
+                  src="./images/resume/profile.jpg"
+                  alt="profile-icon"
+                />
+              </div>
+              <div class="profile-name-wrapper">
+                <h1 class="profile-name">Harsh Patel</h1>
+                <div class="profile-text">I'm a Designer</div>
+              </div>
+              <div class="social-media">
+                <a
+                  class="social-icon"
+                  href="https://www.linkedin.com/in/harshpatel05/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a
+                  class="social-icon"
+                  href="https://github.com/harsh4477"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a
+                  class="social-icon"
+                  href="https://wa.me/+919879562985"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <a
+                  class="social-icon"
+                  href="https://www.instagram.com/harsh_patel_5199/"
+                  target="_blank"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
           </div>
           <div class="col-md-8">
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, ab.
+            <p style="color: #fff">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Laboriosam iure in blanditiis nemo quasi cumque ad rerum
+              voluptates tempora, tenetur facere excepturi autem, quis corrupti
+              totam quibusdam sapiente. Dicta quae est eos ipsa amet. Sequi quas
+              repudiandae recusandae. Temporibus exercitationem hic laboriosam
+              ipsum totam excepturi fuga eos at sapiente nam, assumenda
+              recusandae eligendi harum esse tempora doloribus ut distinctio
+              nisi iure quidem dicta minus rem eum? Voluptas maxime reiciendis
+              eveniet suscipit quidem distinctio unde ea, aspernatur rem earum
+              molestias sint, harum praesentium facere eligendi atque amet velit
+              voluptatum blanditiis consequuntur, non sequi soluta enim.
+              Suscipit aut at fuga perspiciatis ut neque doloribus! Officia,
+              sequi vitae doloremque tenetur possimus quo veniam ipsa facere nam
+              adipisci animi dolore reprehenderit sint laboriosam quae error
+              maxime quos eum beatae aliquam dolorem eius cupiditate delectus a!
+              At amet aperiam error, suscipit, odio culpa vel repudiandae
+              molestiae sunt similique minima ratione dolorem incidunt.
+              Obcaecati, ullam! Similique eos veritatis nostrum vero
+              necessitatibus id tempora dolores nobis. Quam ut distinctio
+              eligendi sunt vero laudantium fuga ipsum provident officia vel
+              modi veniam nisi, voluptas facere perspiciatis est tempore non
+              obcaecati facilis sequi numquam exercitationem? Impedit omnis
+              nihil, dolores voluptas nulla, facilis cupiditate exercitationem
+              labore quos quasi saepe. Cum explicabo quibusdam sequi soluta
+              tempore perspiciatis vitae. Consequatur et cum vitae deleniti
+              nihil, ratione tenetur, earum nisi dicta quo magni esse delectus
+              natus aliquid qui consequuntur.
             </p>
           </div>
         </div>
@@ -84,7 +159,7 @@
     <script>
       var card = $(".profile-card");
       profileCardFixed = "profile-card-fixed";
-      profileCard = $(".banner-main").height();
+      profileCard = $(".banner-detail-main").height();
 
       $(window).scroll(function () {
         if ($(this).scrollTop() > profileCard) {

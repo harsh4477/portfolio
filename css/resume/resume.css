@@ -1,13 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *,
 body {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background: #02162b;
+  font-family: "Poppins", sans-serif;
 }
 
 .header-main {
@@ -120,6 +123,7 @@ body {
   font-size: 50px;
   line-height: 55px;
   font-weight: 600;
+  padding: 15px 0;
 }
 
 .banner-main .banner-detail-main .banner-head .banner-head-sub {
@@ -128,14 +132,91 @@ body {
 
 /* --------------- Main Section ---------------*/
 .main-section .profile-card {
-  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: calc(100vh - 110px);
   background: #00283a;
+  position: relative;
+  margin-top: -70%;
+  border-radius: 10px;
+  padding: 55px 15px;
+  gap: 35px;
 }
 
 .main-section .profile-card.profile-card-fixed {
+  width: 420px;
   position: fixed;
   top: 100px;
   z-index: 999;
+  margin-top: 0;
+}
+
+.main-section .profile-card .profile-icon-wrap {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.main-section .profile-card .profile-icon-wrap .profile-icon {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 0 -15px;
+     object-position: 0 -15px;
+}
+
+.main-section .profile-card .profile-name-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.main-section .profile-card .profile-name-wrapper .profile-name {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.main-section .profile-card .profile-name-wrapper .profile-text {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #919191;
+}
+
+.main-section .profile-card .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+
+.main-section .profile-card .social-media .social-icon {
+  font-size: 32px;
+  color: #dedee0;
 }
 
 @-webkit-keyframes move1 {
