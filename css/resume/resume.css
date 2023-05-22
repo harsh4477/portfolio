@@ -13,12 +13,17 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header-main {
-  padding: 8px;
+  padding: 8px 8px 0;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 9;
+  background: #02162b;
 }
 
 .header-main .cm-navbar-main {
@@ -147,8 +152,7 @@ body {
   position: relative;
   margin-top: -70%;
   border-radius: 10px;
-  padding: 55px 15px;
-  gap: 35px;
+  padding: 55px 35px;
 }
 
 .main-section .profile-card.profile-card-fixed {
@@ -187,6 +191,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+  margin: 30px 0 20px;
 }
 
 .main-section .profile-card .profile-name-wrapper .profile-name {
@@ -197,10 +202,29 @@ body {
   margin-bottom: 0;
 }
 
-.main-section .profile-card .profile-name-wrapper .profile-text {
-  font-size: 18px;
-  line-height: 28px;
-  font-weight: 400;
+.main-section .profile-card .profile-name-wrapper .profile-text-wrap {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  -webkit-filter: blur(0.5px);
+          filter: blur(0.5px);
+}
+
+.main-section .profile-card .profile-name-wrapper .profile-text-wrap #text1,
+.main-section .profile-card .profile-name-wrapper .profile-text-wrap #text2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  display: inline-block;
+  font-size: 20px;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   color: #919191;
 }
 
@@ -215,8 +239,50 @@ body {
 }
 
 .main-section .profile-card .social-media .social-icon {
-  font-size: 32px;
+  font-size: 28px;
   color: #dedee0;
+}
+
+.main-section .profile-card .address-main {
+  width: 100%;
+  padding: 25px 25px;
+  margin: 25px 0;
+  gap: 15px;
+  border-top: 2px groove #153f52;
+  border-bottom: 2px groove #153f52;
+}
+
+.main-section .profile-card .address-main .address-wrap {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.main-section .profile-card .address-main .address-wrap .address-label {
+  color: #fff;
+}
+
+.main-section .profile-card .address-main .address-wrap .address-value {
+  color: #919191;
+}
+
+.main-section .profile-card .contact-main {
+  width: 100%;
+  gap: 15px;
+}
+
+.main-section .profile-card .contact-main .contact-wrap {
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  background: #02162b;
+}
+
+.main-section .profile-card .contact-main .contact-wrap i {
+  font-size: 24px;
+  color: #fff;
 }
 
 @-webkit-keyframes move1 {

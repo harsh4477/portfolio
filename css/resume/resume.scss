@@ -17,12 +17,16 @@ body {
   background: $secondary-color;
   font-family: "Poppins", sans-serif;
 }
+a {
+  text-decoration: none;
+}
 
 .header-main {
-  padding: 8px;
+  padding: 8px 8px 0;
   position: sticky;
   top: 0;
   z-index: 9;
+  background: $secondary-color;
   .cm-navbar-main {
     background-color: $prime-color;
     border-radius: 5px;
@@ -153,8 +157,8 @@ body {
     position: relative;
     margin-top: -70%;
     border-radius: 10px;
-    padding: 55px 15px;
-    gap: 35px;
+    padding: 55px 35px;
+    // gap: 35px;
     &.profile-card-fixed {
       width: 420px;
       position: fixed;
@@ -179,6 +183,7 @@ body {
       flex-direction: column;
       align-items: center;
       gap: 10px;
+      margin: 30px 0 20px;
       .profile-name {
         font-size: 40px;
         line-height: 40px;
@@ -186,11 +191,24 @@ body {
         color: $color-white;
         margin-bottom: 0;
       }
-      .profile-text {
-        font-size: 18px;
-        line-height: 28px;
-        font-weight: 400;
-        color: $color-gray;
+      .profile-text-wrap {
+        position: relative;
+        width: 100%;
+        height: 30px;
+        filter: blur(0.5px);
+        #text1,
+        #text2 {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          display: inline-block;
+          font-size: 20px;
+          text-align: center;
+          user-select: none;
+          color: $color-gray;
+        }
       }
     }
     .social-media {
@@ -198,8 +216,43 @@ body {
       align-items: center;
       gap: 25px;
       .social-icon {
-        font-size: 32px;
+        font-size: 28px;
         color: #dedee0;
+      }
+    }
+    .address-main {
+      width: 100%;
+      padding: 25px 25px;
+      margin: 25px 0;
+      gap: 15px;
+      border-top: 2px groove #153f52;
+      border-bottom: 2px groove #153f52;
+      .address-wrap {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: capitalize;
+        .address-label {
+          color: $color-white;
+        }
+        .address-value {
+          color: $color-gray;
+        }
+      }
+    }
+    .contact-main {
+      width: 100%;
+      gap: 15px;
+      .contact-wrap {
+        width: 55px;
+        height: 55px;
+        border-radius: 10px;
+        background: $secondary-color;
+        i {
+          font-size: 24px;
+          color: $color-white;
+        }
       }
     }
   }
