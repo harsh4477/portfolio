@@ -4,6 +4,7 @@ $prime-color: #00283a;
 $secondary-color: #02162b;
 $color-white: #fff;
 $color-gray: #919191;
+$color-black: #000;
 
 *,
 body {
@@ -39,8 +40,6 @@ a {
     font-size: 18px;
     line-height: 28px;
     font-weight: 500;
-    // background: $prime-color;
-    // color: #fff;
     background: transparent;
     color: $color-white;
     border-color: transparent;
@@ -252,6 +251,311 @@ a {
         i {
           font-size: 24px;
           color: $color-white;
+        }
+      }
+    }
+  }
+
+  /* --------------- Headding Section ---------------*/
+  .headding-section {
+    margin: 25px 0;
+
+    .headding-head {
+      font-size: 24px;
+      line-height: 34px;
+      font-weight: 600;
+      color: #dedee0;
+      margin-bottom: 0;
+    }
+    .headding-number {
+      flex: 1;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 600;
+      color: #919ca1;
+      position: relative;
+      text-align: end;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 25px;
+        transform: translateY(-50%);
+        width: 95%;
+        border: 1px dashed #e1e1eb26;
+        margin-left: 25px;
+      }
+    }
+  }
+
+  /* --------------- Experience Section ---------------*/
+  .road-map-main {
+    margin: 50px 0 51px;
+    .road-map-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 175px;
+      @media (max-width: 991px) {
+        margin-bottom: 25px;
+        height: auto;
+        display: block;
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        clear: both;
+        display: block;
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        clear: both;
+        display: block;
+      }
+      .road-map-circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 25px solid transparent;
+        border-top-color: #00283a;
+        border-right-color: #00283a;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        transform: rotate(45deg);
+        @media (max-width: 992px) {
+          position: unset;
+          border: 25px solid #00283a;
+        }
+
+        .road-map-circle-text {
+          width: 110px;
+          height: 110px;
+          border-radius: 50%;
+          background-color: #00283a;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: 26px;
+          text-transform: capitalize;
+          color: #fff;
+          box-shadow: 0px 0px 10px 5px #00000021;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: auto;
+          transform: rotate(-45deg);
+        }
+      }
+      .road-map-card {
+        width: 35%;
+        // float: right;
+        background: #00283a;
+        padding: 20px 20px;
+        z-index: 1;
+        position: absolute;
+        right: 0;
+        border-radius: 5px;
+        &::before {
+          content: "";
+          width: 25%;
+          height: 20px;
+          background: #00283a;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: -13%;
+          z-index: -1;
+        }
+        @media (max-width: 991px) {
+          width: 100%;
+          margin-top: 30px;
+          position: unset;
+          &::before {
+            content: "";
+            width: 20px;
+            height: 30%;
+            top: 50%;
+            transform: translateX(-50%);
+            left: 50%;
+          }
+        }
+        @media (max-width: 425px) {
+          top: 45%;
+        }
+        .card-head {
+          font-size: 20px;
+          font-weight: 600;
+          text-transform: capitalize;
+          margin: 0 0 15px;
+          color: #fff;
+        }
+        .card-text {
+          color: #fff;
+          margin: 0;
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          @media (max-width: 1199px) {
+            -webkit-line-clamp: 4;
+          }
+        }
+      }
+      &:nth-of-type(even) {
+        .road-map-circle {
+          border-bottom-color: #00283a;
+          border-left-color: #00283a;
+          border-top-color: transparent;
+          border-right-color: transparent;
+          @media (max-width: 991px) {
+            border-color: #00283a;
+          }
+        }
+        .road-map-card {
+          left: 0;
+          &::before {
+            right: -13%;
+            left: unset;
+            @media (max-width: 991px) {
+              content: "";
+              width: 20px;
+              height: 30%;
+              top: 50%;
+              transform: translateX(-50%);
+              left: 50%;
+            }
+            @media (max-width: 425px) {
+              top: 45%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /* --------------- Contact Section ---------------*/
+  .contact-main {
+    .form-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+      .form-card {
+        position: relative;
+        width: 100%;
+
+        .form-input {
+          padding: 20px 25px 15px;
+          width: 100%;
+          border: 1px solid $color-gray;
+          border-radius: 5px;
+          background: transparent;
+          outline: none;
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 400;
+          box-sizing: border-box;
+          color: $color-white;
+
+          &:valid,
+          &:focus {
+            border: 1px solid $color-gray;
+          }
+
+          &:valid ~ .form-label,
+          &:focus ~ .form-label {
+            color: $color-gray;
+            top: 30%;
+            transform: translateY(-70%);
+            font-size: 13px;
+            line-height: 23px;
+          }
+
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus,
+          &:-webkit-autofill:active {
+            transition: background-color 9999s ease-in-out 0s;
+          }
+          &::-webkit-outer-spin-button,
+          &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+          }
+        }
+
+        .form-label {
+          position: absolute;
+          left: 25px;
+          top: 50%;
+          transform: translateY(-50%);
+          pointer-events: none;
+          transition: 0.3s;
+          margin: 0;
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 400;
+          color: $color-gray;
+        }
+        .form-textarea {
+          padding: 20px 25px 15px;
+          width: 100%;
+          border: 1px solid $color-gray;
+          border-radius: 5px;
+          background: transparent;
+          outline: none;
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 400;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          resize: none;
+          box-sizing: border-box;
+          color: $color-white;
+
+          &:valid,
+          &:focus {
+            border: 1px solid $color-gray;
+          }
+
+          &:valid ~ .form-textarea-label,
+          &:focus ~ .form-textarea-label {
+            color: $color-gray;
+            top: 18%;
+            transform: translateY(-82%);
+            font-size: 13px;
+            line-height: 23px;
+          }
+
+          &:-webkit-autofill,
+          &:-webkit-autofill:hover,
+          &:-webkit-autofill:focus,
+          &:-webkit-autofill:active {
+            transition: background-color 9999s ease-in-out 0s;
+          }
+        }
+        .form-textarea-label {
+          position: absolute;
+          left: 25px;
+          top: 30%;
+          transform: translateY(-70%);
+          pointer-events: none;
+          transition: 0.3s;
+          margin: 0;
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 400;
+          color: $color-gray;
         }
       }
     }

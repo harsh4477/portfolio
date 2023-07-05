@@ -136,6 +136,12 @@ a {
 }
 
 /* --------------- Main Section ---------------*/
+.main-section {
+  /* --------------- Headding Section ---------------*/
+  /* --------------- Experience Section ---------------*/
+  /* --------------- Contact Section ---------------*/
+}
+
 .main-section .profile-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -283,6 +289,367 @@ a {
 .main-section .profile-card .contact-main .contact-wrap i {
   font-size: 24px;
   color: #fff;
+}
+
+.main-section .headding-section {
+  margin: 25px 0;
+}
+
+.main-section .headding-section .headding-head {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 600;
+  color: #dedee0;
+  margin-bottom: 0;
+}
+
+.main-section .headding-section .headding-number {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #919ca1;
+  position: relative;
+  text-align: end;
+}
+
+.main-section .headding-section .headding-number::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 95%;
+  border: 1px dashed #e1e1eb26;
+  margin-left: 25px;
+}
+
+.main-section .road-map-main {
+  margin: 50px 0 51px;
+}
+
+.main-section .road-map-main .road-map-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 175px;
+}
+
+@media (max-width: 991px) {
+  .main-section .road-map-main .road-map-wrapper {
+    margin-bottom: 25px;
+    height: auto;
+    display: block;
+  }
+}
+
+.main-section .road-map-main .road-map-wrapper::before {
+  content: "";
+  width: 100%;
+  clear: both;
+  display: block;
+}
+
+.main-section .road-map-main .road-map-wrapper::after {
+  content: "";
+  width: 100%;
+  clear: both;
+  display: block;
+}
+
+.main-section .road-map-main .road-map-wrapper .road-map-circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 25px solid transparent;
+  border-top-color: #00283a;
+  border-right-color: #00283a;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+@media (max-width: 992px) {
+  .main-section .road-map-main .road-map-wrapper .road-map-circle {
+    position: unset;
+    border: 25px solid #00283a;
+  }
+}
+
+.main-section .road-map-main .road-map-wrapper .road-map-circle .road-map-circle-text {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #00283a;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  text-transform: capitalize;
+  color: #fff;
+  -webkit-box-shadow: 0px 0px 10px 5px #00000021;
+          box-shadow: 0px 0px 10px 5px #00000021;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.main-section .road-map-main .road-map-wrapper .road-map-card {
+  width: 35%;
+  background: #00283a;
+  padding: 20px 20px;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  border-radius: 5px;
+}
+
+.main-section .road-map-main .road-map-wrapper .road-map-card::before {
+  content: "";
+  width: 25%;
+  height: 20px;
+  background: #00283a;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -13%;
+  z-index: -1;
+}
+
+@media (max-width: 991px) {
+  .main-section .road-map-main .road-map-wrapper .road-map-card {
+    width: 100%;
+    margin-top: 30px;
+    position: unset;
+  }
+  .main-section .road-map-main .road-map-wrapper .road-map-card::before {
+    content: "";
+    width: 20px;
+    height: 30%;
+    top: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    left: 50%;
+  }
+}
+
+@media (max-width: 425px) {
+  .main-section .road-map-main .road-map-wrapper .road-map-card {
+    top: 45%;
+  }
+}
+
+.main-section .road-map-main .road-map-wrapper .road-map-card .card-head {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0 0 15px;
+  color: #fff;
+}
+
+.main-section .road-map-main .road-map-wrapper .road-map-card .card-text {
+  color: #fff;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 1199px) {
+  .main-section .road-map-main .road-map-wrapper .road-map-card .card-text {
+    -webkit-line-clamp: 4;
+  }
+}
+
+.main-section .road-map-main .road-map-wrapper:nth-of-type(even) .road-map-circle {
+  border-bottom-color: #00283a;
+  border-left-color: #00283a;
+  border-top-color: transparent;
+  border-right-color: transparent;
+}
+
+@media (max-width: 991px) {
+  .main-section .road-map-main .road-map-wrapper:nth-of-type(even) .road-map-circle {
+    border-color: #00283a;
+  }
+}
+
+.main-section .road-map-main .road-map-wrapper:nth-of-type(even) .road-map-card {
+  left: 0;
+}
+
+.main-section .road-map-main .road-map-wrapper:nth-of-type(even) .road-map-card::before {
+  right: -13%;
+  left: unset;
+}
+
+@media (max-width: 991px) {
+  .main-section .road-map-main .road-map-wrapper:nth-of-type(even) .road-map-card::before {
+    content: "";
+    width: 20px;
+    height: 30%;
+    top: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    left: 50%;
+  }
+}
+
+@media (max-width: 425px) {
+  .main-section .road-map-main .road-map-wrapper:nth-of-type(even) .road-map-card::before {
+    top: 45%;
+  }
+}
+
+.main-section .contact-main .form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
+}
+
+.main-section .contact-main .form-wrapper .form-card {
+  position: relative;
+  width: 100%;
+}
+
+.main-section .contact-main .form-wrapper .form-card .form-input {
+  padding: 20px 25px 15px;
+  width: 100%;
+  border: 1px solid #919191;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+.main-section .contact-main .form-wrapper .form-card .form-input:valid, .main-section .contact-main .form-wrapper .form-card .form-input:focus {
+  border: 1px solid #919191;
+}
+
+.main-section .contact-main .form-wrapper .form-card .form-input:valid ~ .form-label,
+.main-section .contact-main .form-wrapper .form-card .form-input:focus ~ .form-label {
+  color: #919191;
+  top: 30%;
+  -webkit-transform: translateY(-70%);
+          transform: translateY(-70%);
+  font-size: 13px;
+  line-height: 23px;
+}
+
+.main-section .contact-main .form-wrapper .form-card .form-input:-webkit-autofill, .main-section .contact-main .form-wrapper .form-card .form-input:-webkit-autofill:hover, .main-section .contact-main .form-wrapper .form-card .form-input:-webkit-autofill:focus, .main-section .contact-main .form-wrapper .form-card .form-input:-webkit-autofill:active {
+  -webkit-transition: background-color 9999s ease-in-out 0s;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.main-section .contact-main .form-wrapper .form-card .form-input::-webkit-outer-spin-button, .main-section .contact-main .form-wrapper .form-card .form-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.main-section .contact-main .form-wrapper .form-card .form-label {
+  position: absolute;
+  left: 25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  pointer-events: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #919191;
+}
+
+.main-section .contact-main .form-wrapper .form-card .form-textarea {
+  padding: 20px 25px 15px;
+  width: 100%;
+  border: 1px solid #919191;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  resize: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fff;
+}
+
+.main-section .contact-main .form-wrapper .form-card .form-textarea:valid, .main-section .contact-main .form-wrapper .form-card .form-textarea:focus {
+  border: 1px solid #919191;
+}
+
+.main-section .contact-main .form-wrapper .form-card .form-textarea:valid ~ .form-textarea-label,
+.main-section .contact-main .form-wrapper .form-card .form-textarea:focus ~ .form-textarea-label {
+  color: #919191;
+  top: 18%;
+  -webkit-transform: translateY(-82%);
+          transform: translateY(-82%);
+  font-size: 13px;
+  line-height: 23px;
+}
+
+.main-section .contact-main .form-wrapper .form-card .form-textarea:-webkit-autofill, .main-section .contact-main .form-wrapper .form-card .form-textarea:-webkit-autofill:hover, .main-section .contact-main .form-wrapper .form-card .form-textarea:-webkit-autofill:focus, .main-section .contact-main .form-wrapper .form-card .form-textarea:-webkit-autofill:active {
+  -webkit-transition: background-color 9999s ease-in-out 0s;
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+.main-section .contact-main .form-wrapper .form-card .form-textarea-label {
+  position: absolute;
+  left: 25px;
+  top: 30%;
+  -webkit-transform: translateY(-70%);
+          transform: translateY(-70%);
+  pointer-events: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #919191;
 }
 
 @-webkit-keyframes move1 {
