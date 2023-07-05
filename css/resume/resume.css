@@ -139,6 +139,7 @@ a {
 /* --------------- Main Section ---------------*/
 .main-section {
   /* --------------- Profile Section ---------------*/
+  /* --------------- My Story Section ---------------*/
   /* --------------- Headding Section ---------------*/
   /* --------------- Experience Section ---------------*/
   /* --------------- Contact Section ---------------*/
@@ -293,8 +294,48 @@ a {
   color: #fff;
 }
 
+.main-section .my-story-main {
+  background-color: #00283a;
+  padding: 15px;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+  margin-top: -40px;
+}
+
+.main-section .my-story-main::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: -8px;
+  height: 8px;
+  width: calc(100% - 60px);
+  background-color: #00283a;
+  border-radius: 10px 10px 0 0;
+  opacity: 0.3;
+}
+
+.main-section .my-story-main::after {
+  content: '"';
+  position: absolute;
+  bottom: -15px;
+  right: 55px;
+  color: #919191;
+  font-size: 50px;
+  line-height: 50px;
+  font-style: italic;
+}
+
+.main-section .my-story-main .my-story-text {
+  font-size: 16px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0;
+}
+
 .main-section .headding-section {
-  margin: 25px 0;
+  margin: 45px 0;
 }
 
 .main-section .headding-section .headding-head {
@@ -330,7 +371,7 @@ a {
 }
 
 .main-section .timeline-main {
-  padding: 25px 0;
+  padding: 0 0;
 }
 
 .main-section .timeline-main .timeline-wrap {
