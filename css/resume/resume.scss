@@ -11,7 +11,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // overflow: hidden;
   scroll-behavior: smooth;
 }
 body {
@@ -21,7 +20,7 @@ body {
 a {
   text-decoration: none;
 }
-
+/* --------------- Header Main ---------------*/
 .header-main {
   padding: 8px 8px 0;
   position: sticky;
@@ -82,20 +81,6 @@ a {
       border-color: transparent;
       background-color: transparent;
       transition: ease-in-out;
-      // .annimation-line {
-      //   &:nth-child(1) {
-      //     animation: move1 1.5s infinite ease;
-      //   }
-      //   &:nth-child(2) {
-      //     animation: move2 1.5s infinite ease;
-      //   }
-      //   &:nth-child(3) {
-      //     animation: move3 1.5s infinite ease;
-      //   }
-      //   &:nth-child(4) {
-      //     animation: move4 1.5s infinite ease;
-      //   }
-      // }
     }
   }
 }
@@ -147,6 +132,7 @@ a {
 
 /* --------------- Main Section ---------------*/
 .main-section {
+  /* --------------- Profile Section ---------------*/
   .profile-card {
     display: flex;
     align-items: center;
@@ -289,150 +275,137 @@ a {
   }
 
   /* --------------- Experience Section ---------------*/
-  .road-map-main {
-    margin: 50px 0 51px;
-    .road-map-wrapper {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      height: 175px;
-      @media (max-width: 991px) {
-        margin-bottom: 25px;
-        height: auto;
-        display: block;
-      }
-
+  .timeline-main {
+    padding: 25px 0;
+    .timeline-wrap {
+      gap: 30px;
       &::before {
         content: "";
-        width: 100%;
-        clear: both;
-        display: block;
-      }
-      &::after {
-        content: "";
-        width: 100%;
-        clear: both;
-        display: block;
-      }
-      .road-map-circle {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        border: 25px solid transparent;
-        border-top-color: #00283a;
-        border-right-color: #00283a;
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        transform: rotate(45deg);
-        @media (max-width: 992px) {
-          position: unset;
-          border: 25px solid #00283a;
-        }
-
-        .road-map-circle-text {
-          width: 110px;
-          height: 110px;
-          border-radius: 50%;
-          background-color: #00283a;
-          font-size: 20px;
-          font-weight: 600;
-          line-height: 26px;
-          text-transform: capitalize;
-          color: #fff;
-          box-shadow: 0px 0px 10px 5px #00000021;
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          margin: auto;
-          transform: rotate(-45deg);
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        height: calc(100% - 10px);
+        background-color: #00283a;
+        animation: line 5s linear;
+        @media (max-width: 767px) {
+          left: 95%;
         }
       }
-      .road-map-card {
-        width: 35%;
-        // float: right;
-        background: #00283a;
-        padding: 20px 20px;
-        z-index: 1;
-        position: absolute;
-        right: 0;
-        border-radius: 5px;
-        &::before {
+      .timeline-card {
+        width: 50%;
+        margin-right: auto;
+        @media (max-width: 767px) {
+          width: 95%;
+        }
+        &::after {
           content: "";
-          width: 25%;
-          height: 20px;
-          background: #00283a;
           position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          left: -13%;
-          z-index: -1;
+          top: 10px;
+          right: -10px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          border: 3px solid #fff;
+          background: #00283a;
+          animation: fadeIn 1.5s;
+          animation-fill-mode: both;
         }
-        @media (max-width: 991px) {
-          width: 100%;
-          margin-top: 30px;
-          position: unset;
+        .timeline-card-wrap {
+          margin-right: 35px;
+          background-color: #00283a;
+          border-radius: 10px;
+          padding: 30px;
+          animation: fadeInRight 2.5s;
+          animation-fill-mode: both;
+          @media (max-width: 767px) {
+            padding: 20px;
+          }
           &::before {
             content: "";
+            position: absolute;
+            left: 30px;
+            top: -8px;
+            height: 8px;
+            width: calc(100% - 60px);
+            background-color: #00283a;
+            border-radius: 10px 10px 0 0;
+            opacity: 0.3;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            right: -8px;
             width: 20px;
-            height: 30%;
-            top: 50%;
-            transform: translateX(-50%);
-            left: 50%;
+            height: 20px;
+            background-color: #00283a;
+            border-radius: 5px;
+            transform: rotate(45deg);
           }
-        }
-        @media (max-width: 425px) {
-          top: 45%;
-        }
-        .card-head {
-          font-size: 20px;
-          font-weight: 600;
-          text-transform: capitalize;
-          margin: 0 0 15px;
-          color: #fff;
-        }
-        .card-text {
-          color: #fff;
-          margin: 0;
-          display: -webkit-box;
-          -webkit-line-clamp: 5;
-          -webkit-box-orient: vertical;
-          overflow: hidden;
-          @media (max-width: 1199px) {
-            -webkit-line-clamp: 4;
-          }
-        }
-      }
-      &:nth-of-type(even) {
-        .road-map-circle {
-          border-bottom-color: #00283a;
-          border-left-color: #00283a;
-          border-top-color: transparent;
-          border-right-color: transparent;
-          @media (max-width: 991px) {
-            border-color: #00283a;
-          }
-        }
-        .road-map-card {
-          left: 0;
-          &::before {
-            right: -13%;
-            left: unset;
-            @media (max-width: 991px) {
-              content: "";
-              width: 20px;
-              height: 30%;
-              top: 50%;
-              transform: translateX(-50%);
-              left: 50%;
+          .card-head-wrap {
+            gap: 10px;
+            margin-bottom: 10px;
+            .timeline-card-head {
+              font-size: 28px;
+              line-height: 38px;
+              font-weight: 500;
+              color: #fff;
+              margin-bottom: 0;
+              @media (max-width: 767px) {
+                font-size: 18px;
+                line-height: 28px;
+              }
             }
-            @media (max-width: 425px) {
-              top: 45%;
+            .timeline-card-subhead {
+              font-size: 16px;
+              line-height: 26px;
+              font-weight: 400;
+              color: #bdbdbd;
+              margin-bottom: 0;
+              font-style: italic;
+              @media (max-width: 767px) {
+                font-size: 14px;
+                line-height: 24px;
+              }
+            }
+          }
+
+          .timeline-card-text {
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #919ca1;
+            margin: 25px 0 0;
+            @media (max-width: 767px) {
+              font-size: 12px;
+              line-height: 22px;
+            }
+          }
+        }
+
+        &:nth-child(even) {
+          @media (min-width: 768px) {
+            margin-left: auto;
+            margin-right: 0;
+            &::after {
+              right: unset;
+              left: -10px;
+              animation-delay: 2.6s;
+            }
+            .timeline-card-wrap {
+              margin-right: 0;
+              margin-left: 35px;
+              animation: fadeInLeft 2.5s;
+              animation-fill-mode: both;
+              animation-delay: 2.5s;
+              &::after {
+                right: unset;
+                border-left: none;
+                left: -8px;
+                border-right: 10px solid #00283a;
+              }
             }
           }
         }
@@ -562,6 +535,7 @@ a {
   }
 }
 
+/* --------------- Button keyframes ---------------*/
 @keyframes move1 {
   0% {
     height: calc(100% + 1px);
@@ -637,5 +611,45 @@ a {
   100% {
     width: 0;
     right: calc(100% + 1px);
+  }
+}
+
+/* --------------- Experience keyframes ---------------*/
+@keyframes line {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: calc(100% - 10px);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
