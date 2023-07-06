@@ -322,6 +322,9 @@ a {
       padding: 30px;
       padding-right: 0;
       position: relative;
+      @media (max-width: 767px) {
+        padding: 20px;
+      }
       .eduction-iconwrap {
         min-width: 130px;
         width: 130px;
@@ -347,6 +350,12 @@ a {
           left: 90%;
           border: 8px solid $prime-color;
           width: 100%;
+          @media (max-width: 767px) {
+            transform: rotate(90deg);
+            left: 0;
+            top: unset;
+            bottom: -50px;
+          }
         }
         .education-icon {
           color: $color-white;
@@ -362,10 +371,16 @@ a {
         color: $color-white;
         .eduction-detail-head {
           margin-bottom: 15px;
+          @media (max-width: 767px) {
+            gap: 10px;
+          }
           .eduction-detail-heading {
             font-size: 20px;
             line-height: 30px;
             margin-bottom: 0;
+            @media (max-width: 767px) {
+              text-align: center;
+            }
           }
           .eduction-detail-years {
             font-size: 16px;
@@ -380,12 +395,18 @@ a {
           line-height: 26px;
           font-weight: 400;
           color: $color-gray;
+          @media (max-width: 767px) {
+            text-align: center;
+          }
         }
         .eduction-detail-per {
           font-size: 14px;
           line-height: 24px;
           font-weight: 400;
           color: $color-gray;
+          @media (max-width: 767px) {
+            text-align: center;
+          }
         }
       }
     }
