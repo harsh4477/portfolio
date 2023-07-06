@@ -13,6 +13,10 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+p {
+  margin-bottom: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -141,6 +145,7 @@ a {
   /* --------------- Profile Section ---------------*/
   /* --------------- My Story Section ---------------*/
   /* --------------- Headding Section ---------------*/
+  /* --------------- Education Section ---------------*/
   /* --------------- Experience Section ---------------*/
   /* --------------- Contact Section ---------------*/
 }
@@ -368,6 +373,89 @@ a {
   width: 95%;
   border: 1px dashed #e1e1eb26;
   margin-left: 25px;
+}
+
+.main-section .education-main .education-wrap {
+  gap: 85px;
+  padding: 30px;
+  padding-right: 0;
+  position: relative;
+}
+
+.main-section .education-main .education-wrap .eduction-iconwrap {
+  min-width: 130px;
+  width: 130px;
+  height: 130px;
+  position: relative;
+}
+
+.main-section .education-main .education-wrap .eduction-iconwrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: #00283a;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  border-radius: 10px;
+}
+
+.main-section .education-main .education-wrap .eduction-iconwrap::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 90%;
+  border: 8px solid #00283a;
+  width: 100%;
+}
+
+.main-section .education-main .education-wrap .eduction-iconwrap .education-icon {
+  color: #fff;
+  font-size: 45px;
+  z-index: 2;
+}
+
+.main-section .education-main .education-wrap .eduction-detail {
+  background: #00283a;
+  border-radius: 10px;
+  padding: 35px;
+  color: #fff;
+}
+
+.main-section .education-main .education-wrap .eduction-detail .eduction-detail-head {
+  margin-bottom: 15px;
+}
+
+.main-section .education-main .education-wrap .eduction-detail .eduction-detail-head .eduction-detail-heading {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 0;
+}
+
+.main-section .education-main .education-wrap .eduction-detail .eduction-detail-head .eduction-detail-years {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  font-style: italic;
+  color: #919191;
+}
+
+.main-section .education-main .education-wrap .eduction-detail .eduction-detail-text {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #919191;
+}
+
+.main-section .education-main .education-wrap .eduction-detail .eduction-detail-per {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #919191;
 }
 
 .main-section .timeline-main {

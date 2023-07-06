@@ -23,12 +23,6 @@
       <nav class="navbar navbar-expand-sm cm-navbar-main">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <!-- <img
-              class="img-fluid"
-              width="180px"
-              src="images/my-logo-white.png"
-              alt=" logo"
-            /> -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               version="1.2"
@@ -154,7 +148,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="cm-navbar-btn-wrapper">
-            <button onclick="" class="cm-navbar-btn">
+            <button type="submit" class="cm-navbar-btn" onclick="{pdfOPen()}">
               Open CV
 
               <span class="annimation-line"></span>
@@ -318,6 +312,87 @@
             <div
               class="d-flex align-items-center justify-content-between headding-section"
             >
+              <h3 class="headding-head">Education</h3>
+              <span class="headding-number">01</span>
+            </div>
+
+            <!-- --------------- Education Section --------------- -->
+            <div class="d-flex flex-column education-main">
+              <div class="d-flex align-items-center education-wrap">
+                <div
+                  class="d-flex align-items-center justify-content-center eduction-iconwrap"
+                >
+                  <i class="fa-solid fa-building-columns education-icon"></i>
+                  <!-- <i class="fa-solid fa-school education-icon"></i> -->
+                </div>
+
+                <div class="eduction-detail w-100">
+                  <div
+                    class="d-flex align-items-center justify-content-between eduction-detail-head"
+                  >
+                    <h5 class="eduction-detail-heading">
+                      T.D. Vashi Shree Sarswati Vidhyamandir
+                    </h5>
+                    <p class="eduction-detail-years">2014</p>
+                  </div>
+                  <p class="eduction-detail-text">
+                    Secondary Education Board (S.S.C)
+                  </p>
+                  <p class="eduction-detail-per">Percentage - 66.36%</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center education-wrap">
+                <div
+                  class="d-flex align-items-center justify-content-center eduction-iconwrap"
+                >
+                  <i class="fa-solid fa-building-columns education-icon"></i>
+                  <!-- <i class="fa-solid fa-school education-icon"></i> -->
+                </div>
+
+                <div class="eduction-detail w-100">
+                  <div
+                    class="d-flex align-items-center justify-content-between eduction-detail-head"
+                  >
+                    <h5 class="eduction-detail-heading">
+                      Jeevan Bharti School
+                    </h5>
+                    <p class="eduction-detail-years">2016</p>
+                  </div>
+                  <p class="eduction-detail-text">
+                    Higher Secondary Education Board (H.S.C)
+                  </p>
+                  <p class="eduction-detail-per">Percentage - 69.57%</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center education-wrap">
+                <div
+                  class="d-flex align-items-center justify-content-center eduction-iconwrap"
+                >
+                  <i class="fa-solid fa-graduation-cap education-icon"></i>
+                  <!-- <i class="fa-solid fa-school education-icon"></i> -->
+                </div>
+
+                <div class="eduction-detail w-100">
+                  <div
+                    class="d-flex align-items-center justify-content-between eduction-detail-head"
+                  >
+                    <h5 class="eduction-detail-heading">
+                      Shri Uttar Gujarat B. C. A. College
+                    </h5>
+                    <p class="eduction-detail-years">2016 - 2019</p>
+                  </div>
+                  <p class="eduction-detail-text">
+                    Bachelors' in Computer Application (BCA)
+                  </p>
+                  <p class="eduction-detail-per">CGPA - 6.52</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- --------------- Heading Section --------------- -->
+            <div
+              class="d-flex align-items-center justify-content-between headding-section"
+            >
               <h3 class="headding-head">Experience</h3>
               <span class="headding-number">01</span>
             </div>
@@ -431,17 +506,28 @@
     <script src="./js/name-animation.js"></script>
 
     <script>
-      var card = $(".profile-card");
-      profileCardFixed = "profile-card-fixed";
-      profileCard = $(".banner-detail-main").height();
+      if (window.innerWidth > 991) {
+        var card = $(".profile-card");
+        profileCardFixed = "profile-card-fixed";
+        profileCard = $(".banner-detail-main").height();
 
-      $(window).scroll(function () {
-        if ($(this).scrollTop() > profileCard) {
-          card.addClass(profileCardFixed);
-        } else {
-          card.removeClass(profileCardFixed);
-        }
-      });
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > profileCard) {
+            card.addClass(profileCardFixed);
+          } else {
+            card.removeClass(profileCardFixed);
+          }
+        });
+      }
+    </script>
+
+    <script>
+      function pdfOPen() {
+        window.open(
+          "https://drive.google.com/file/d/1oHOTRvqJqUbGlbcZ44CBNuLhpnFBxzun/view",
+          "_blank"
+        );
+      }
     </script>
   </body>
 </html>
