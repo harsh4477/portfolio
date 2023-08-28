@@ -551,8 +551,68 @@ a {
     }
   }
 
+  /* --------------- Skill Section ---------------*/
+  .skill-main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // display: flex;
+    // flex-direction: column;
+    gap: 20px;
+    .skill-wrrap {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .skill-name {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .skill-bar {
+        height: 10px;
+        background-color: #00283a;
+        border-radius: 8px;
+      }
+
+      .skill-per {
+        height: 10px;
+        background: #23576f;
+        border-radius: 8px;
+        width: 0;
+        transition: 1s linear;
+        position: relative;
+        &:before {
+          content: attr(per);
+          position: absolute;
+          padding: 4px 6px;
+          background-color: #23576f;
+          color: #fff;
+          font-size: 11px;
+          border-radius: 4px;
+          top: -35px;
+          right: 0;
+          transform: translateX(50%);
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          background-color: #23576f;
+          top: -16px;
+          right: 0;
+          transform: translateX(50%) rotate(45deg);
+          border-radius: 2px;
+        }
+      }
+    }
+  }
+
   /* --------------- Contact Section ---------------*/
   .contact-main {
+    margin-bottom: 35px;
     .form-wrapper {
       display: flex;
       align-items: center;
@@ -602,7 +662,6 @@ a {
             margin: 0;
           }
         }
-
         .form-label {
           position: absolute;
           left: 25px;
@@ -667,6 +726,22 @@ a {
           line-height: 28px;
           font-weight: 400;
           color: $color-gray;
+        }
+      }
+      .form-button-card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        .form-button {
+          background: #00283a;
+          border: 0;
+          padding: 10px 35px;
+          color: #fff;
+          border-radius: 5px;
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 500;
         }
       }
     }

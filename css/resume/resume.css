@@ -147,6 +147,7 @@ a {
   /* --------------- Headding Section ---------------*/
   /* --------------- Education Section ---------------*/
   /* --------------- Experience Section ---------------*/
+  /* --------------- Skill Section ---------------*/
   /* --------------- Contact Section ---------------*/
 }
 
@@ -675,6 +676,79 @@ a {
   }
 }
 
+.main-section .skill-main {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.main-section .skill-main .skill-wrrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.main-section .skill-main .skill-wrrap .skill-name {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.main-section .skill-main .skill-wrrap .skill-bar {
+  height: 10px;
+  background-color: #00283a;
+  border-radius: 8px;
+}
+
+.main-section .skill-main .skill-wrrap .skill-per {
+  height: 10px;
+  background: #23576f;
+  border-radius: 8px;
+  width: 0;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
+  position: relative;
+}
+
+.main-section .skill-main .skill-wrrap .skill-per:before {
+  content: attr(per);
+  position: absolute;
+  padding: 4px 6px;
+  background-color: #23576f;
+  color: #fff;
+  font-size: 11px;
+  border-radius: 4px;
+  top: -35px;
+  right: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.main-section .skill-main .skill-wrrap .skill-per:after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #23576f;
+  top: -16px;
+  right: 0;
+  -webkit-transform: translateX(50%) rotate(45deg);
+          transform: translateX(50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+.main-section .contact-main {
+  margin-bottom: 35px;
+}
+
 .main-section .contact-main .form-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -805,6 +879,30 @@ a {
   line-height: 28px;
   font-weight: 400;
   color: #919191;
+}
+
+.main-section .contact-main .form-wrapper .form-button-card {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.main-section .contact-main .form-wrapper .form-button-card .form-button {
+  background: #00283a;
+  border: 0;
+  padding: 10px 35px;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
 }
 
 /* --------------- Button keyframes ---------------*/
