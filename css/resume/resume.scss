@@ -426,7 +426,6 @@ a {
         width: 4px;
         height: calc(100% - 10px);
         background-color: #00283a;
-        animation: line 5s linear;
         @media (max-width: 767px) {
           left: 95%;
         }
@@ -447,16 +446,12 @@ a {
           border-radius: 50%;
           border: 3px solid #fff;
           background: #00283a;
-          animation: fadeIn 1.5s;
-          animation-fill-mode: both;
         }
         .timeline-card-wrap {
           margin-right: 35px;
           background-color: #00283a;
           border-radius: 10px;
           padding: 30px;
-          animation: fadeInRight 2.5s;
-          animation-fill-mode: both;
           @media (max-width: 767px) {
             padding: 20px;
           }
@@ -530,19 +525,42 @@ a {
             &::after {
               right: unset;
               left: -10px;
-              animation-delay: 2.6s;
             }
             .timeline-card-wrap {
               margin-right: 0;
               margin-left: 35px;
-              animation: fadeInLeft 2.5s;
-              animation-fill-mode: both;
-              animation-delay: 2.5s;
               &::after {
                 right: unset;
                 border-left: none;
                 left: -8px;
                 border-right: 10px solid #00283a;
+              }
+            }
+          }
+        }
+      }
+      &.timelineAnimation {
+        &::before {
+          animation: line 5s linear;
+        }
+        .timeline-card {
+          &::after {
+            animation: fadeIn 1.5s;
+            animation-fill-mode: both;
+          }
+          .timeline-card-wrap {
+            animation: fadeInRight 2.5s;
+            animation-fill-mode: both;
+          }
+          &:nth-child(even) {
+            @media (min-width: 768px) {
+              &::after {
+                animation-delay: 2.6s;
+              }
+              .timeline-card-wrap {
+                animation: fadeInLeft 2.5s;
+                animation-delay: 2.5s;
+                animation-fill-mode: both;
               }
             }
           }

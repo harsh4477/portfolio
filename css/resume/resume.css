@@ -517,8 +517,6 @@ a {
   width: 4px;
   height: calc(100% - 10px);
   background-color: #00283a;
-  -webkit-animation: line 5s linear;
-          animation: line 5s linear;
 }
 
 @media (max-width: 767px) {
@@ -548,10 +546,6 @@ a {
   border-radius: 50%;
   border: 3px solid #fff;
   background: #00283a;
-  -webkit-animation: fadeIn 1.5s;
-          animation: fadeIn 1.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
 }
 
 .main-section .timeline-main .timeline-wrap .timeline-card .timeline-card-wrap {
@@ -559,10 +553,6 @@ a {
   background-color: #00283a;
   border-radius: 10px;
   padding: 30px;
-  -webkit-animation: fadeInRight 2.5s;
-          animation: fadeInRight 2.5s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
 }
 
 @media (max-width: 767px) {
@@ -655,24 +645,50 @@ a {
   .main-section .timeline-main .timeline-wrap .timeline-card:nth-child(even)::after {
     right: unset;
     left: -10px;
-    -webkit-animation-delay: 2.6s;
-            animation-delay: 2.6s;
   }
   .main-section .timeline-main .timeline-wrap .timeline-card:nth-child(even) .timeline-card-wrap {
     margin-right: 0;
     margin-left: 35px;
-    -webkit-animation: fadeInLeft 2.5s;
-            animation: fadeInLeft 2.5s;
-    -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-    -webkit-animation-delay: 2.5s;
-            animation-delay: 2.5s;
   }
   .main-section .timeline-main .timeline-wrap .timeline-card:nth-child(even) .timeline-card-wrap::after {
     right: unset;
     border-left: none;
     left: -8px;
     border-right: 10px solid #00283a;
+  }
+}
+
+.main-section .timeline-main .timeline-wrap.timelineAnimation::before {
+  -webkit-animation: line 5s linear;
+          animation: line 5s linear;
+}
+
+.main-section .timeline-main .timeline-wrap.timelineAnimation .timeline-card::after {
+  -webkit-animation: fadeIn 1.5s;
+          animation: fadeIn 1.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.main-section .timeline-main .timeline-wrap.timelineAnimation .timeline-card .timeline-card-wrap {
+  -webkit-animation: fadeInRight 2.5s;
+          animation: fadeInRight 2.5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+@media (min-width: 768px) {
+  .main-section .timeline-main .timeline-wrap.timelineAnimation .timeline-card:nth-child(even)::after {
+    -webkit-animation-delay: 2.6s;
+            animation-delay: 2.6s;
+  }
+  .main-section .timeline-main .timeline-wrap.timelineAnimation .timeline-card:nth-child(even) .timeline-card-wrap {
+    -webkit-animation: fadeInLeft 2.5s;
+            animation: fadeInLeft 2.5s;
+    -webkit-animation-delay: 2.5s;
+            animation-delay: 2.5s;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
   }
 }
 
