@@ -16,6 +16,17 @@ body {
 body {
   background: $secondary-color;
   font-family: "Poppins", sans-serif;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #00283a;
+    border-radius: 10px;
+  }
 }
 p {
   margin-bottom: 0;
