@@ -9,6 +9,12 @@
           animation: letter-animation 8s linear forwards infinite;
 }
 
+@media (max-width: 767px) {
+  .logo-path {
+    width: 120px;
+  }
+}
+
 @-webkit-keyframes letter-animation {
   0% {
     stroke-dashoffset: 500;

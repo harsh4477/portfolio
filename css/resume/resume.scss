@@ -61,6 +61,10 @@ a {
     border-radius: 5px;
     overflow: visible;
     position: relative;
+    @media (max-width: 767px) {
+      font-size: 14px;
+      padding: 8px 20px;
+    }
     .annimation-line {
       display: block;
       position: absolute;
@@ -99,77 +103,95 @@ a {
   }
 }
 
-/* --------------- Banner Section ---------------*/
-.banner-main {
-  padding: 8px;
-  position: relative;
-
-  .banner-img {
+/* --------------- Main Section ---------------*/
+.main-section {
+  display: flex;
+  flex-direction: column;
+  /* --------------- Banner Section ---------------*/
+  .banner-main {
+    padding: 8px;
     position: relative;
-    height: 450px;
-    // &::before {
-    //   content: "";
-    //   width: 100%;
-    //   height: 100%;
-    //   background: #00000060;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   border-radius: 5px 5px 25px 25px;
-    // }
-    video {
-      width: 100%;
+
+    .banner-img {
+      position: relative;
       height: 450px;
-      object-fit: cover;
-      border-radius: 5px 5px 25px 25px;
-      filter: blur(2px) brightness(80%);
+      @media (max-width: 767px) {
+        height: 180px;
+      }
+      video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px 5px 25px 25px;
+        filter: blur(2px) brightness(80%);
+      }
     }
-  }
-  .banner-detail-main {
-    position: absolute;
-    bottom: 50%;
-    transform: translateY(50%);
-    left: 0;
-    width: 100%;
-    .banner-head {
-      color: $color-white;
-      font-size: 50px;
-      line-height: 55px;
-      font-weight: 600;
-      padding: 15px 0;
-      .banner-head-sub {
-        color: $secondary-color;
+    .banner-detail-main {
+      position: absolute;
+      bottom: 50%;
+      transform: translateY(50%);
+      left: 0;
+      width: 100%;
+      .banner-head {
+        color: $color-white;
+        font-size: 50px;
+        line-height: 55px;
+        font-weight: 600;
+        padding: 15px 0;
+        margin: 0;
+        @media (max-width: 767px) {
+          font-size: 30px;
+          line-height: 40px;
+        }
+        .banner-head-sub {
+          color: $secondary-color;
+        }
       }
     }
   }
-}
 
-/* --------------- Main Section ---------------*/
-.main-section {
   /* --------------- Profile Section ---------------*/
   .profile-card {
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: calc(100vh - 110px);
     background: $prime-color;
     position: relative;
     margin-top: -70%;
     border-radius: 10px;
     padding: 55px 35px;
-    // gap: 35px;
-    &.profile-card-fixed {
-      width: 420px;
-      position: fixed;
-      top: 100px;
-      z-index: 999;
-      margin-top: 0;
+    position: sticky;
+    top: 97px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 30px;
+      top: -8px;
+      height: 8px;
+      width: calc(100% - 60px);
+      background-color: #00283a;
+      border-radius: 10px 10px 0 0;
+      opacity: 0.3;
+    }
+    @media (max-width: 1199px) {
+      padding: 35px 25px;
+    }
+    @media (max-width: 767px) {
+      height: auto;
+      padding: 55px 15px;
+      margin-top: 20px;
     }
     .profile-icon-wrap {
-      width: 165px;
+      min-width: 165px;
+      min-height: 165px;
       height: 165px;
       border-radius: 50%;
       overflow: hidden;
+      @media (max-width: 1199px) {
+        min-width: 145px;
+        min-height: 145px;
+        height: 145px;
+      }
       .profile-icon {
         width: 100%;
         height: 100%;
@@ -189,6 +211,10 @@ a {
         font-weight: 500;
         color: $color-white;
         margin-bottom: 0;
+        @media (max-width: 1199px) {
+          font-size: 30px;
+          line-height: 30px;
+        }
       }
       .profile-text-wrap {
         position: relative;
@@ -226,6 +252,12 @@ a {
       gap: 15px;
       border-top: 2px groove #153f52;
       border-bottom: 2px groove #153f52;
+      @media (max-width: 1199px) {
+        margin: 15px 0;
+      }
+      @media (max-width: 767px) {
+        padding: 25px 5px;
+      }
       .address-wrap {
         font-size: 14px;
         line-height: 24px;
@@ -284,6 +316,9 @@ a {
       font-size: 50px;
       line-height: 50px;
       font-style: italic;
+    }
+    @media (max-width: 767px) {
+      margin-top: 30px;
     }
     .my-story-text {
       font-size: 16px;
@@ -371,7 +406,6 @@ a {
         .education-icon {
           color: $color-white;
           font-size: 45px;
-          // transform: rotate(-45deg);
           z-index: 2;
         }
       }
@@ -585,8 +619,9 @@ a {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    // display: flex;
-    // flex-direction: column;
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
     gap: 20px;
     .skill-wrrap {
       display: flex;

@@ -65,6 +65,13 @@ a {
   position: relative;
 }
 
+@media (max-width: 767px) {
+  .cm-navbar-btn-wrapper .cm-navbar-btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+}
+
 .cm-navbar-btn-wrapper .cm-navbar-btn .annimation-line {
   display: block;
   position: absolute;
@@ -111,20 +118,44 @@ a {
   transition: ease-in-out;
 }
 
-/* --------------- Banner Section ---------------*/
-.banner-main {
+/* --------------- Main Section ---------------*/
+.main-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* --------------- Banner Section ---------------*/
+  /* --------------- Profile Section ---------------*/
+  /* --------------- My Story Section ---------------*/
+  /* --------------- Headding Section ---------------*/
+  /* --------------- Education Section ---------------*/
+  /* --------------- Experience Section ---------------*/
+  /* --------------- Skill Section ---------------*/
+  /* --------------- Contact Section ---------------*/
+}
+
+.main-section .banner-main {
   padding: 8px;
   position: relative;
 }
 
-.banner-main .banner-img {
+.main-section .banner-main .banner-img {
   position: relative;
   height: 450px;
 }
 
-.banner-main .banner-img video {
+@media (max-width: 767px) {
+  .main-section .banner-main .banner-img {
+    height: 180px;
+  }
+}
+
+.main-section .banner-main .banner-img video {
   width: 100%;
-  height: 450px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px 5px 25px 25px;
@@ -132,7 +163,7 @@ a {
           filter: blur(2px) brightness(80%);
 }
 
-.banner-main .banner-detail-main {
+.main-section .banner-main .banner-detail-main {
   position: absolute;
   bottom: 50%;
   -webkit-transform: translateY(50%);
@@ -141,27 +172,24 @@ a {
   width: 100%;
 }
 
-.banner-main .banner-detail-main .banner-head {
+.main-section .banner-main .banner-detail-main .banner-head {
   color: #fff;
   font-size: 50px;
   line-height: 55px;
   font-weight: 600;
   padding: 15px 0;
+  margin: 0;
 }
 
-.banner-main .banner-detail-main .banner-head .banner-head-sub {
+@media (max-width: 767px) {
+  .main-section .banner-main .banner-detail-main .banner-head {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+.main-section .banner-main .banner-detail-main .banner-head .banner-head-sub {
   color: #02162b;
-}
-
-/* --------------- Main Section ---------------*/
-.main-section {
-  /* --------------- Profile Section ---------------*/
-  /* --------------- My Story Section ---------------*/
-  /* --------------- Headding Section ---------------*/
-  /* --------------- Education Section ---------------*/
-  /* --------------- Experience Section ---------------*/
-  /* --------------- Skill Section ---------------*/
-  /* --------------- Contact Section ---------------*/
 }
 
 .main-section .profile-card {
@@ -175,27 +203,56 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: calc(100vh - 110px);
   background: #00283a;
   position: relative;
   margin-top: -70%;
   border-radius: 10px;
   padding: 55px 35px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 97px;
 }
 
-.main-section .profile-card.profile-card-fixed {
-  width: 420px;
-  position: fixed;
-  top: 100px;
-  z-index: 999;
-  margin-top: 0;
+.main-section .profile-card::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: -8px;
+  height: 8px;
+  width: calc(100% - 60px);
+  background-color: #00283a;
+  border-radius: 10px 10px 0 0;
+  opacity: 0.3;
+}
+
+@media (max-width: 1199px) {
+  .main-section .profile-card {
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-section .profile-card {
+    height: auto;
+    padding: 55px 15px;
+    margin-top: 20px;
+  }
 }
 
 .main-section .profile-card .profile-icon-wrap {
-  width: 165px;
+  min-width: 165px;
+  min-height: 165px;
   height: 165px;
   border-radius: 50%;
   overflow: hidden;
+}
+
+@media (max-width: 1199px) {
+  .main-section .profile-card .profile-icon-wrap {
+    min-width: 145px;
+    min-height: 145px;
+    height: 145px;
+  }
 }
 
 .main-section .profile-card .profile-icon-wrap .profile-icon {
@@ -228,6 +285,13 @@ a {
   font-weight: 500;
   color: #fff;
   margin-bottom: 0;
+}
+
+@media (max-width: 1199px) {
+  .main-section .profile-card .profile-name-wrapper .profile-name {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .main-section .profile-card .profile-name-wrapper .profile-text-wrap {
@@ -278,6 +342,18 @@ a {
   gap: 15px;
   border-top: 2px groove #153f52;
   border-bottom: 2px groove #153f52;
+}
+
+@media (max-width: 1199px) {
+  .main-section .profile-card .address-main {
+    margin: 15px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .main-section .profile-card .address-main {
+    padding: 25px 5px;
+  }
 }
 
 .main-section .profile-card .address-main .address-wrap {
@@ -343,6 +419,12 @@ a {
   font-size: 50px;
   line-height: 50px;
   font-style: italic;
+}
+
+@media (max-width: 767px) {
+  .main-section .my-story-main {
+    margin-top: 30px;
+  }
 }
 
 .main-section .my-story-main .my-story-text {
@@ -712,6 +794,13 @@ a {
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .main-section .skill-main {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .main-section .skill-main .skill-wrrap {

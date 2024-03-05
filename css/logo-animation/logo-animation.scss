@@ -7,6 +7,9 @@
   path {
     animation: letter-animation 8s linear forwards infinite;
   }
+  @media (max-width: 767px) {
+    width: 120px;
+  }
 }
 
 @keyframes letter-animation {

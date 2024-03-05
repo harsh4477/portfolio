@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Resume</title>
 
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link
@@ -14,8 +14,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link href="./css/logo-animation/logo-animation.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="./css/resume/resume.css" rel="stylesheet" />
+    <link href="./css/logo-animation/logo-animation.css" rel="stylesheet" />
   </head>
   <body>
     <!-- --------------- Header Section --------------- -->
@@ -139,10 +140,18 @@
               </g>
             </svg>
           </a>
-
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavbar"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div class="cm-navbar-btn-wrapper">
             <button type="submit" class="cm-navbar-btn" onclick="{pdfOPen()}">
               Open CV
+
               <span class="annimation-line"></span>
               <span class="annimation-line"></span>
               <span class="annimation-line"></span>
@@ -153,28 +162,31 @@
       </nav>
     </header>
 
-    <main class="main-section">
-      <div class="banner-main">
-        <div class="banner-img">
-          <video autoplay muted loop>
-            <source src="images/resume/sea.mp4" type="video/mp4" />
-          </video>
-        </div>
-        <div class="banner-detail-main">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-5 col-xl-4"></div>
-              <div class="col-lg-7 col-xl-8">
-                <h2 class="banner-head">
-                  You don't have to be
-                  <br /><span class="banner-head-sub">'A Creative'</span>
-                  to be Creative.
-                </h2>
-              </div>
+    <!-- --------------- Banner Section --------------- -->
+    <div class="banner-main">
+      <div class="banner-img">
+        <video autoplay muted loop>
+          <source src="images/resume/sea.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="banner-detail-main">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-xl-4"></div>
+            <div class="col-lg-7 col-xl-8">
+              <h2 class="banner-head">
+                You don't have to be
+                <br /><span class="banner-head-sub">'A Creative'</span> to be
+                Creative.
+              </h2>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- --------------- Main Section --------------- -->
+    <main class="main-section">
       <div class="container">
         <div class="row">
           <div class="col-12 col-lg-5 col-xl-4">
@@ -290,7 +302,11 @@
           </div>
           <div class="col-12 col-lg-7 col-xl-8">
             <!-- --------------- My Story Section --------------- -->
-            <div class="my-story-main">
+            <div
+              class="my-story-main"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
               <p class="my-story-text">
                 To Acquire a Challenging Position in an Environment Where I Can
                 Best Utilize My Skills and Education
@@ -309,6 +325,8 @@
             <div class="d-flex flex-column education-main w-100">
               <div
                 class="d-flex flex-column flex-md-row align-items-center education-wrap"
+                data-aos="fade-left"
+                data-aos-duration="2000"
               >
                 <div
                   class="d-flex align-items-center justify-content-center eduction-iconwrap"
@@ -333,6 +351,8 @@
               </div>
               <div
                 class="d-flex flex-column flex-md-row align-items-center education-wrap"
+                data-aos="fade-left"
+                data-aos-duration="2000"
               >
                 <div
                   class="d-flex align-items-center justify-content-center eduction-iconwrap"
@@ -358,6 +378,8 @@
               </div>
               <div
                 class="d-flex flex-column flex-md-row align-items-center education-wrap"
+                data-aos="fade-left"
+                data-aos-duration="2000"
               >
                 <div
                   class="d-flex align-items-center justify-content-center eduction-iconwrap"
@@ -572,6 +594,8 @@
 
     <script src="./bootstrap/js/bootstrap.bundle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Name Animation Script  -->
     <script src="./js/name-animation.js"></script>
