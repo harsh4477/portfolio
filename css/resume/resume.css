@@ -250,6 +250,7 @@ a {
 @media (max-width: 1199px) {
   .main-section .profile-card .profile-icon-wrap {
     min-width: 145px;
+    width: 145px;
     min-height: 145px;
     height: 145px;
   }
