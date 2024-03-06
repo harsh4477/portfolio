@@ -1,44 +1,3 @@
-// $(window).scroll(function () {
-//   if ($(this).scrollTop() > 1) {
-//     $(".cm-navbar-main").addClass("sticky");
-//   } else {
-//     $(".cm-navbar-main").removeClass("sticky");
-//   }
-// });
-
-// $(document).ready(function () {
-//   console.log(window.innerWidth, "window.innerWidth");
-//   // fixed card
-//   if (window.innerWidth > 991) {
-//     var card = $(".profile-card");
-//     profileCardFixed = "profile-card-fixed";
-//     profileCard = $(".banner-detail-main").height();
-//     var timelineWrap = $(".timeline-wrap");
-//     timelineMain = $(".timeline-main").height();
-
-//     $(window).scroll(function () {
-//       if ($(this).scrollTop() > profileCard) {
-//         card.addClass(profileCardFixed);
-//       } else {
-//         card.removeClass(profileCardFixed);
-//       }
-//       if ($(document).scrollTop() > timelineMain) {
-//         timelineWrap.addClass("timelineAnimation");
-//       } else {
-//         timelineWrap.removeClass("timelineAnimation");
-//       }
-//       if ($(document).scrollTop() > timelineMain) {
-//         timelineWrap.addClass("timelineAnimation");
-//       } else {
-//         timelineWrap.removeClass("timelineAnimation");
-//       }
-//     });
-//   } else {
-//     var card = $(".profile-card");
-//     card.removeClass("profile-card-fixed");
-//   }
-// });
-
 // open pdf
 function pdfOPen() {
   window.open(
@@ -69,3 +28,5 @@ $(".skill-per").each(function () {
 // }
 
 // AOS.init();
+
+document.getElementById("vid").play();
