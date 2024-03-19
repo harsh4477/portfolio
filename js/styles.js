@@ -29,4 +29,4 @@ $(".skill-per").each(function () {
 
 // AOS.init();
 
-document.getElementById("vid").play();
+// document.getElementById("vid").play();
