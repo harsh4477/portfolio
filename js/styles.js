@@ -1,7 +1,7 @@
 // open pdf
 function pdfOPen() {
   window.open(
-    "https://drive.google.com/file/d/1oiviMCYzOEh9bC9u_JmncEDSdhq0ZgQ6/view?usp=drive_link",
+    "https://drive.google.com/file/d/14PqM2X0Qi4ZsPQuSEDB4v0cDQFOMd9ai/view?usp=drive_link",
     "_blank"
   );
 }
