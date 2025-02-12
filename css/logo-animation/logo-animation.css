@@ -3,39 +3,12 @@
   stroke-width: 0;
   stroke-dasharray: 500;
 }
-
 .logo-path path {
-  -webkit-animation: letter-animation 8s linear forwards infinite;
-          animation: letter-animation 8s linear forwards infinite;
+  animation: letter-animation 8s linear forwards infinite;
 }
-
 @media (max-width: 767px) {
   .logo-path {
     width: 120px;
-  }
-}
-
-@-webkit-keyframes letter-animation {
-  0% {
-    stroke-dashoffset: 500;
-    stroke-width: 0.8;
-    fill-opacity: 0;
-    fill: #fff;
-  }
-  25% {
-    fill-opacity: 0.2;
-  }
-  50% {
-    fill-opacity: 0.5;
-  }
-  75% {
-    fill-opacity: 0.8;
-  }
-  100% {
-    fill-opacity: 1;
-    stroke-width: 0;
-    stroke-dashoffset: 0;
-    fill: #fff;
   }
 }
 
@@ -61,5 +34,4 @@
     stroke-dashoffset: 0;
     fill: #fff;
   }
-}
-/*# sourceMappingURL=logo-animation.css.map */
+}/*# sourceMappingURL=logo-animation.css.map */
