@@ -588,6 +588,11 @@ a {
   gap: 10px;
   margin-bottom: 10px;
 }
+@media (max-width: 767px) {
+  .main-section .timeline-main .timeline-wrap .timeline-card .timeline-card-wrap .card-head-wrap {
+    gap: 5px;
+  }
+}
 .main-section .timeline-main .timeline-wrap .timeline-card .timeline-card-wrap .card-head-wrap .timeline-card-head {
   font-size: 28px;
   line-height: 38px;
@@ -621,11 +626,12 @@ a {
   font-weight: 400;
   color: #919ca1;
   margin: 25px 0 0;
+  padding-left: 20px;
 }
 @media (max-width: 767px) {
   .main-section .timeline-main .timeline-wrap .timeline-card .timeline-card-wrap .timeline-card-text {
-    font-size: 12px;
-    line-height: 22px;
+    font-size: 14px;
+    line-height: 24px;
     margin: 15px 0 0;
   }
 }
