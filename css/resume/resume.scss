@@ -244,6 +244,9 @@ a {
       .social-icon {
         font-size: 28px;
         color: #dedee0;
+        @media (max-width: 767px) {
+          font-size: 24px;
+        }
       }
     }
     .address-main {
@@ -281,9 +284,16 @@ a {
         height: 55px;
         border-radius: 10px;
         background: $secondary-color;
+        @media (max-width: 767px) {
+          width: 45px;
+          height: 45px;
+        }
         i {
           font-size: 24px;
           color: $color-white;
+          @media (max-width: 767px) {
+            font-size: 20px;
+          }
         }
       }
     }
@@ -333,6 +343,9 @@ a {
   /* --------------- Headding Section ---------------*/
   .headding-section {
     margin: 45px 0;
+    @media (max-width: 767px) {
+      margin: 25px 0;
+    }
 
     .headding-head {
       font-size: 24px;
@@ -340,6 +353,10 @@ a {
       font-weight: 600;
       color: #dedee0;
       margin-bottom: 0;
+      @media (max-width: 767px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
     }
     .headding-number {
       flex: 1;
@@ -533,8 +550,8 @@ a {
               color: #fff;
               margin-bottom: 0;
               @media (max-width: 767px) {
-                font-size: 18px;
-                line-height: 28px;
+                font-size: 16px;
+                line-height: 26px;
               }
             }
             .timeline-card-subhead {
@@ -560,6 +577,7 @@ a {
             @media (max-width: 767px) {
               font-size: 12px;
               line-height: 22px;
+              margin: 15px 0 0;
             }
           }
         }
@@ -632,6 +650,9 @@ a {
         color: #ffffff;
         font-size: 18px;
         font-weight: 500;
+        @media (max-width: 767px) {
+          font-size: 16px;
+        }
       }
 
       .skill-bar {
@@ -700,6 +721,11 @@ a {
           font-weight: 400;
           box-sizing: border-box;
           color: $color-white;
+          @media (max-width: 767px) {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 20px 15px 15px;
+          }
 
           &:valid,
           &:focus {
@@ -739,6 +765,9 @@ a {
           line-height: 28px;
           font-weight: 400;
           color: $color-gray;
+          @media (max-width: 767px) {
+            left: 15px;
+          }
         }
         .form-textarea {
           padding: 20px 25px 15px;
@@ -757,6 +786,11 @@ a {
           resize: none;
           box-sizing: border-box;
           color: $color-white;
+          @media (max-width: 767px) {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 20px 15px 15px;
+          }
 
           &:valid,
           &:focus {
@@ -791,6 +825,9 @@ a {
           line-height: 28px;
           font-weight: 400;
           color: $color-gray;
+          @media (max-width: 767px) {
+            left: 15px;
+          }
         }
       }
       .form-button-card {

@@ -265,6 +265,11 @@ a {
   font-size: 28px;
   color: #dedee0;
 }
+@media (max-width: 767px) {
+  .main-section .profile-card .social-media .social-icon {
+    font-size: 24px;
+  }
+}
 .main-section .profile-card .address-main {
   width: 100%;
   padding: 25px 25px;
@@ -306,9 +311,20 @@ a {
   border-radius: 10px;
   background: #02162b;
 }
+@media (max-width: 767px) {
+  .main-section .profile-card .contact-main .contact-wrap {
+    width: 45px;
+    height: 45px;
+  }
+}
 .main-section .profile-card .contact-main .contact-wrap i {
   font-size: 24px;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .main-section .profile-card .contact-main .contact-wrap i {
+    font-size: 20px;
+  }
 }
 .main-section .my-story-main {
   background-color: #00283a;
@@ -354,12 +370,23 @@ a {
 .main-section .headding-section {
   margin: 45px 0;
 }
+@media (max-width: 767px) {
+  .main-section .headding-section {
+    margin: 25px 0;
+  }
+}
 .main-section .headding-section .headding-head {
   font-size: 24px;
   line-height: 34px;
   font-weight: 600;
   color: #dedee0;
   margin-bottom: 0;
+}
+@media (max-width: 767px) {
+  .main-section .headding-section .headding-head {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 .main-section .headding-section .headding-number {
   flex: 1;
@@ -570,8 +597,8 @@ a {
 }
 @media (max-width: 767px) {
   .main-section .timeline-main .timeline-wrap .timeline-card .timeline-card-wrap .card-head-wrap .timeline-card-head {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 .main-section .timeline-main .timeline-wrap .timeline-card .timeline-card-wrap .card-head-wrap .timeline-card-subhead {
@@ -599,6 +626,7 @@ a {
   .main-section .timeline-main .timeline-wrap .timeline-card .timeline-card-wrap .timeline-card-text {
     font-size: 12px;
     line-height: 22px;
+    margin: 15px 0 0;
   }
 }
 @media (min-width: 768px) {
@@ -663,6 +691,11 @@ a {
   font-size: 18px;
   font-weight: 500;
 }
+@media (max-width: 767px) {
+  .main-section .skill-main .skill-wrrap .skill-name {
+    font-size: 16px;
+  }
+}
 .main-section .skill-main .skill-wrrap .skill-bar {
   height: 10px;
   background-color: #00283a;
@@ -726,6 +759,13 @@ a {
   box-sizing: border-box;
   color: #fff;
 }
+@media (max-width: 767px) {
+  .main-section .contact-main .form-wrapper .form-card .form-input {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 20px 15px 15px;
+  }
+}
 .main-section .contact-main .form-wrapper .form-card .form-input:valid, .main-section .contact-main .form-wrapper .form-card .form-input:focus {
   border: 1px solid #919191;
 }
@@ -757,6 +797,11 @@ a {
   font-weight: 400;
   color: #919191;
 }
+@media (max-width: 767px) {
+  .main-section .contact-main .form-wrapper .form-card .form-label {
+    left: 15px;
+  }
+}
 .main-section .contact-main .form-wrapper .form-card .form-textarea {
   padding: 20px 25px 15px;
   width: 100%;
@@ -774,6 +819,13 @@ a {
   resize: none;
   box-sizing: border-box;
   color: #fff;
+}
+@media (max-width: 767px) {
+  .main-section .contact-main .form-wrapper .form-card .form-textarea {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 20px 15px 15px;
+  }
 }
 .main-section .contact-main .form-wrapper .form-card .form-textarea:valid, .main-section .contact-main .form-wrapper .form-card .form-textarea:focus {
   border: 1px solid #919191;
@@ -801,6 +853,11 @@ a {
   line-height: 28px;
   font-weight: 400;
   color: #919191;
+}
+@media (max-width: 767px) {
+  .main-section .contact-main .form-wrapper .form-card .form-textarea-label {
+    left: 15px;
+  }
 }
 .main-section .contact-main .form-wrapper .form-button-card {
   width: 100%;
