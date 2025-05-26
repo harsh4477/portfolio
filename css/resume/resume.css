@@ -110,6 +110,7 @@ a {
   /* --------------- Education Section ---------------*/
   /* --------------- Experience Section ---------------*/
   /* --------------- Skill Section ---------------*/
+  /* --------------- expertise Section ---------------*/
   /* --------------- Contact Section ---------------*/
 }
 .main-section .banner-main {
@@ -135,8 +136,7 @@ a {
 }
 .main-section .banner-main .banner-detail-main {
   position: absolute;
-  bottom: 50%;
-  transform: translateY(50%);
+  bottom: 20%;
   left: 0;
   width: 100%;
 }
@@ -328,7 +328,6 @@ a {
 }
 .main-section .my-story-main {
   background-color: #00283a;
-  padding: 15px;
   border-radius: 10px;
   padding: 30px;
   position: relative;
@@ -737,6 +736,55 @@ a {
   right: 0;
   transform: translateX(50%) rotate(45deg);
   border-radius: 2px;
+}
+.main-section .expertise-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+.main-section .expertise-main .expertise-card {
+  background-color: #00283a;
+  border-radius: 10px;
+  padding: 60px 25px 30px;
+  position: relative;
+  gap: 10px;
+  margin-top: 35px;
+}
+.main-section .expertise-main .expertise-card::before {
+  content: "";
+  position: absolute;
+  left: 30px;
+  top: -8px;
+  height: 8px;
+  width: calc(100% - 60px);
+  background-color: #00283a;
+  border-radius: 10px 10px 0 0;
+  opacity: 0.3;
+}
+.main-section .expertise-main .expertise-card .expertise-card-icon {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: #00283a;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1490196078);
+}
+.main-section .expertise-main .expertise-card .expertise-card-title {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 0;
+  color: #fff;
+}
+.main-section .expertise-main .expertise-card .expertise-card-text {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #919191;
+  padding-bottom: 25px;
 }
 .main-section .contact-main {
   margin-bottom: 35px;
