@@ -34,44 +34,44 @@ $(".skill-per").each(function () {
 })();
 
 // EmailJS functionality
-function sendEmail() {
-  // Get form values
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const subject = document.getElementById('subject').value;
-  const phone = document.getElementById('phone').value;
-  const description = document.getElementById('description').value;
+// function sendEmail() {
+//   // Get form values
+//   const name = document.getElementById('name').value;
+//   const email = document.getElementById('email').value;
+//   const subject = document.getElementById('subject').value;
+//   const phone = document.getElementById('phone').value;
+//   const description = document.getElementById('description').value;
   
-  // Validate form
-  if (!name || !email || !subject || !phone || !description) {
-    alert('Please fill in all fields');
-    return false;
-  }
+//   // Validate form
+//   if (!name || !email || !subject || !phone || !description) {
+//     alert('Please fill in all fields');
+//     return false;
+//   }
   
-  // EmailJS configuration (you'll need to set up your own EmailJS account)
-  const serviceID = 'service_harsh_5199_email';
-  const templateID = 'template_harsh_5199_mail';
-  const publicKey = 'eo78_5F6c0Vr88CWO';
+//   // EmailJS configuration (you'll need to set up your own EmailJS account)
+//   const serviceID = 'service_harsh_5199_email';
+//   const templateID = 'template_harsh_5199_mail';
+//   const publicKey = 'eo78_5F6c0Vr88CWO';
   
-  // EmailJS parameters
-  const templateParams = {
-    name: name,
-    email: email,
-    phone:phone,
-    subject: subject,
-    message: description
-  };
+//   // EmailJS parameters
+//   const templateParams = {
+//     name: name,
+//     email: email,
+//     phone:phone,
+//     subject: subject,
+//     message: description
+//   };
   
-  // Send email using EmailJS
-  emailjs.send(serviceID, templateID, templateParams, publicKey)
-    .then(function(response) {
-      console.log('SUCCESS!', response.status, response.text);
-      alert('Message sent successfully!');
-      document.querySelector('.form-wrapper').reset();
-    }, function(error) {
-      console.log('FAILED...', error);
-      alert('Failed to send message. Please try again.');
-    });
+//   // Send email using EmailJS
+//   emailjs.send(serviceID, templateID, templateParams, publicKey)
+//     .then(function(response) {
+//       console.log('SUCCESS!', response.status, response.text);
+//       alert('Message sent successfully!');
+//       document.querySelector('.form-wrapper').reset();
+//     }, function(error) {
+//       console.log('FAILED...', error);
+//       alert('Failed to send message. Please try again.');
+//     });
   
-  return false;
-}
+//   return false;
+// }
