@@ -856,6 +856,7 @@ a {
 .main-section .contact-main .form-wrapper .form-card .form-input:-webkit-autofill, .main-section .contact-main .form-wrapper .form-card .form-input:-webkit-autofill:hover, .main-section .contact-main .form-wrapper .form-card .form-input:-webkit-autofill:focus, .main-section .contact-main .form-wrapper .form-card .form-input:-webkit-autofill:active {
   -webkit-transition: background-color 9999s ease-in-out 0s;
   transition: background-color 9999s ease-in-out 0s;
+  -webkit-text-fill-color: #ffffff;
 }
 .main-section .contact-main .form-wrapper .form-card .form-input::-webkit-outer-spin-button, .main-section .contact-main .form-wrapper .form-card .form-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
