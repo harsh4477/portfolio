@@ -789,7 +789,7 @@
                     id="name"
                     required="required"
                   />
-                  <label class="form-label" for="name">Name</label>
+                  <label class="form-label" for="name">Full Name</label>
                 </div>
 
                 <div class="form-card">
@@ -815,8 +815,21 @@
                     >Subject</label
                   >
                 </div>
-
+                
                 <div class="form-card">
+                  <input
+                    class="form-input"
+                    type="text"
+                    name="phone"
+                    id="phone"
+                    required="required"
+                  />
+                  <label class="form-label" for="phone"
+                    >Phone</label
+                  >
+                </div>
+
+                <div class="form-card card-description">
                   <textarea
                     class="form-textarea"
                     maxlength="420"
@@ -841,6 +854,9 @@
 
     <script src="./bootstrap/js/bootstrap.bundle.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+    <!-- EmailJS Script -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <!-- Name Animation Script  -->
     <script src="./js/name-animation.js"></script>

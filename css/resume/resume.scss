@@ -758,11 +758,14 @@ a {
   .contact-main {
     margin-bottom: 35px;
     .form-wrapper {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
-      gap: 15px;
+      @media (max-width: 1199px) {
+        grid-template-columns: 1fr;
+      }
       .form-card {
         position: relative;
         width: 100%;
@@ -887,12 +890,22 @@ a {
             left: 15px;
           }
         }
+        &.card-description{
+          grid-column: span 2;
+          @media (max-width: 1199px) {
+            grid-column: unset;
+          }
+        }
       }
       .form-button-card {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        grid-column: span 2;
+        @media (max-width: 1199px) {
+            grid-column: unset;
+          }
         .form-button {
           background: #00283a;
           border: 0;
@@ -905,6 +918,7 @@ a {
         }
       }
     }
+    
   }
 }
 

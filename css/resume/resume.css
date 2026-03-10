@@ -104,14 +104,6 @@ a {
   display: flex;
   flex-direction: column;
   /* --------------- Banner Section ---------------*/
-  /* --------------- Profile Section ---------------*/
-  /* --------------- My Story Section ---------------*/
-  /* --------------- Headding Section ---------------*/
-  /* --------------- Education Section ---------------*/
-  /* --------------- Experience Section ---------------*/
-  /* --------------- Skill Section ---------------*/
-  /* --------------- expertise Section ---------------*/
-  /* --------------- Contact Section ---------------*/
 }
 .main-section .banner-main {
   padding: 8px;
@@ -156,6 +148,9 @@ a {
 }
 .main-section .banner-main .banner-detail-main .banner-head .banner-head-sub {
   color: #02162b;
+}
+.main-section {
+  /* --------------- Profile Section ---------------*/
 }
 .main-section .profile-card {
   display: flex;
@@ -326,6 +321,9 @@ a {
     font-size: 20px;
   }
 }
+.main-section {
+  /* --------------- My Story Section ---------------*/
+}
 .main-section .my-story-main {
   background-color: #00283a;
   border-radius: 10px;
@@ -366,6 +364,9 @@ a {
   color: #fff;
   margin-bottom: 0;
 }
+.main-section {
+  /* --------------- Headding Section ---------------*/
+}
 .main-section .headding-section {
   margin: 45px 0;
 }
@@ -405,6 +406,9 @@ a {
   width: 95%;
   border: 1px dashed rgba(225, 225, 235, 0.1490196078);
   margin-left: 25px;
+}
+.main-section {
+  /* --------------- Education Section ---------------*/
 }
 .main-section .education-main .education-wrap {
   gap: 85px;
@@ -508,6 +512,9 @@ a {
   .main-section .education-main .education-wrap .eduction-detail .eduction-detail-per {
     text-align: center;
   }
+}
+.main-section {
+  /* --------------- Experience Section ---------------*/
 }
 .main-section .timeline-main {
   padding: 0 0;
@@ -675,16 +682,21 @@ a {
     animation-fill-mode: both;
   }
 }
+.main-section {
+  /* --------------- Skill Section ---------------*/
+}
 .main-section .skill-main {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
 }
 @media (max-width: 767px) {
   .main-section .skill-main {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+.main-section .skill-main {
+  gap: 20px;
 }
 .main-section .skill-main .skill-wrrap {
   display: flex;
@@ -737,6 +749,9 @@ a {
   transform: translateX(50%) rotate(45deg);
   border-radius: 2px;
 }
+.main-section {
+  /* --------------- expertise Section ---------------*/
+}
 .main-section .expertise-main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -786,15 +801,23 @@ a {
   color: #919191;
   padding-bottom: 25px;
 }
+.main-section {
+  /* --------------- Contact Section ---------------*/
+}
 .main-section .contact-main {
   margin-bottom: 35px;
 }
 .main-section .contact-main .form-wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  gap: 15px;
+}
+@media (max-width: 1199px) {
+  .main-section .contact-main .form-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
 .main-section .contact-main .form-wrapper .form-card {
   position: relative;
@@ -913,11 +936,25 @@ a {
     left: 15px;
   }
 }
+.main-section .contact-main .form-wrapper .form-card.card-description {
+  grid-column: span 2;
+}
+@media (max-width: 1199px) {
+  .main-section .contact-main .form-wrapper .form-card.card-description {
+    grid-column: unset;
+  }
+}
 .main-section .contact-main .form-wrapper .form-button-card {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  grid-column: span 2;
+}
+@media (max-width: 1199px) {
+  .main-section .contact-main .form-wrapper .form-button-card {
+    grid-column: unset;
+  }
 }
 .main-section .contact-main .form-wrapper .form-button-card .form-button {
   background: #00283a;
